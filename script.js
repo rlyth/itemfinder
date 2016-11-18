@@ -148,6 +148,7 @@ function searchCharForItem(key, itemID) {
 		if(req.status >= 200 && req.status < 400) {
 			var response = JSON.parse(req.responseText);
 			
+			var charList = [];
 			var charsHasItem = [];
 			
 			// For all characters in the account
@@ -163,7 +164,10 @@ function searchCharForItem(key, itemID) {
 								// If the item id in this slot matches the id we are searching for
 								// and the character has not already been added to the array
 								if(response[i].bags[j].inventory[k].id == itemID
-									&& charsHasItem.indexOf(response[i].name) == -1) {
+									&& charList.indexOf(response[i].name) == -1) {
+									// Prevent duplicate entries
+									charList.push(response[i].name);
+										
 									// Populate an object with this charcter's info
 									var thisChar = {name:"", level:"", race:"", prof:""};
 									thisChar.name = response[i].name;
