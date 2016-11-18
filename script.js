@@ -83,7 +83,7 @@ function getItemId(key) {
 		return;
 	}
 	
-	req.open("GET", "http://www.gw2spidy.com/api/v0.9/json/item-search/" + lostItem, true);
+	req.open("GET", "https://www.gw2spidy.com/api/v0.9/json/item-search/" + lostItem, true);
 	
 	req.addEventListener('load', function() {
 		if(req.status >= 200 && req.status < 400) {
