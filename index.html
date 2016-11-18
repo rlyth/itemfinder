@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Guild Wars 2 Lost Item Finder</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+ </head>
+ <body>
+	<div id="title" align="center"><h1>Lost Item Finder</h1></div>
+ 
+	<div id="user_input" align="center">
+		<label><p><strong>Account API Key</strong>
+		<br>(must have character and inventory permissions)
+		<br><input type="text" id="api_key"></label>
+		<p><label><strong>Name of Lost Item</strong>
+		<br><input type="text" id="item_name"></label>
+		<p><input type="submit" id="findItem" value="Find My Item">
+	</div>
+	
+	<div id="error" align="center">
+	</div>
+	
+	<div id="report" align="center">
+		<strong>Characters on account <span id="account_name"></span> 
+		that have <span id="item"></span> in their inventory:</strong>
+		<p><div id="chars"></div>
+	</div>
+  
+  <script src="script.js"></script>
+ </body>
+</html>

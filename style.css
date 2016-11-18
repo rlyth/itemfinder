@@ -1,0 +1,42 @@
+body {
+	font-family:helvetica;
+	background-color:#f7f9fa;
+}
+
+input[type=text] {
+	width: 50%;
+	text-align: center;
+}
+
+#error {
+	background-color:#fff;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	display: none;
+	border: 1px solid red;
+	padding: 10px;
+}
+
+#report {
+	background-color:#fff;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	visibility: hidden;
+	border: 1px solid #AAA;
+	padding: 10px;
+}
+
+#title {
+	background-color:#aa0404;
+	color:#fff;
+	float:top;
+	padding:10px;
+	margin-bottom:5px;
+	font-family:georgia;
+}
+
+#usage {
+	margin:10px;
+}
